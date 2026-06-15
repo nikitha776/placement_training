@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MongoDB Commands Cheat Sheet</h1>
+        <ul class="cmd-list">
+            <li>
+                <strong>show dbs</strong>
+                <span>List all databases</span>
+            </li>
+            <li>
+                <strong>use &lt;database_name&gt;</strong>
+                <span>Switch to a specific database or create it if it doesn't exist</span>
+            </li>
+            <li>
+                <strong>show collections</strong>
+                <span>List all collections within the current database</span>
+            </li>
+            <li>
+                <strong>db.createCollection("name")</strong>
+                <span>Explicitly create a new collection</span>
+            </li>
+            <li>
+                <strong>db.collection.insertOne({ key: "value" })</strong>
+                <span>Insert a single document into the collection</span>
+            </li>
+            <li>
+                <strong>db.collection.insertMany([{ key: "v1" }, { key: "v2" }])</strong>
+                <span>Insert multiple documents at once</span>
+            </li>
+            <li>
+                <strong>db.collection.find()</strong>
+                <span>Retrieve all documents in the collection</span>
+            </li>
+            <li>
+                <strong>db.collection.findOne({ key: "value" })</strong>
+                <span>Retrieve a single document matching the query</span>
+            </li>
+            <li>
+                <strong>db.collection.updateOne({ key: "old" }, { $set: { key: "new" } })</strong>
+                <span>Update the first document that matches the filter</span>
+            </li>
+            <li>
+                <strong>db.collection.deleteOne({ key: "value" })</strong>
+                <span>Delete the first document that matches the filter</span>
+            </li>
+            <li>
+                <strong>db.collection.drop()</strong>
+                <span>Drop (delete) the collection</span>
+            </li>
+            <li>
+                <strong>db.dropDatabase()</strong>
+                <span>Drop the current database</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
