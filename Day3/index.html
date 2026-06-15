@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Student Manager</title>
+    <link rel="stylesheet" href="student.css">
 </head>
 <body>
-  <div class="container">
-    <h1>My To-Do List</h1>
+    <div class="container">
+        <h1>Student Manager</h1>
+        <div class="form-box">
+            <input type="text"
+                   id="name"
+                   placeholder="Enter Name">
 
-    <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Add a new task..." autofocus>
-      <button id="addBtn">Add</button>
+            <input type="number"
+                   id="age"
+                   placeholder="Enter Age">
+
+            <input type="text"
+                   id="course"
+                   placeholder="Enter Course">
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+        </div>
+        <div id="studentList">
+        </div>
     </div>
+    <script src="student.js"></script>
 
-    <ul id="taskList"></ul>
-  </div>
-
-  <script src="app.js"></script>
 </body>
 </html>
