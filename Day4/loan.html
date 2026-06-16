@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Loan Approval System</title>
+    <link rel="stylesheet" href="loan.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 Bank Loan Approval System</h1>
+
+        <!-- Loan Application Form -->
+        <div class="form-section">
+            <h2>Loan Application Form</h2>
+            <form id="loanForm">
+                <div class="form-group">
+                    <label for="name">Applicant Name:</label>
+                    <input type="text" id="name" placeholder="Enter full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicantType">Applicant Type:</label>
+                    <select id="applicantType" required>
+                        <option value="">-- Select Type --</option>
+                        <option value="Student">Student</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                </div>
+
+                <!-- Student fields -->
+                <div class="form-group conditional" id="marksGroup">
+                    <label for="marks">Marks (%):</label>
+                    <input type="number" id="marks" placeholder="Enter marks (0-100)" min="0" max="100">
+                </div>
+
+                <!-- Employee fields -->
+                <div class="form-group conditional" id="incomeGroup">
+                    <label for="income">Monthly Income (₹):</label>
+                    <input type="number" id="income" placeholder="Enter monthly income" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="loanAmount">Loan Amount (₹):</label>
+                    <input type="number" id="loanAmount" placeholder="Enter loan amount" min="0" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+        </div>
+
+        <!-- Results Table -->
+        <div class="table-section">
+            <h2>Application Records</h2>
+            <div class="table-wrapper">
+                <table id="recordsTable">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Applicant Name</th>
+                            <th>Type</th>
+                            <th>Marks (%)</th>
+                            <th>Income (₹)</th>
+                            <th>Loan Amount (₹)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody">
+                    </tbody>
+                </table>
+                <p class="no-records" id="noRecords">No applications submitted yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="loan.js"></script>
+</body>
+</html>
